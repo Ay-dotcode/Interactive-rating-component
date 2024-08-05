@@ -3,3 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    font-family: Overpass, sans-serif;
+}
+
+main {
+    position: relative;
+    background-color: hsl(213, 19%, 18%);
+    color: white;
+}
