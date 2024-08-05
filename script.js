@@ -1,11 +1,19 @@
 const submitBtn = document.getElementById('submitBtn');
 const rating = document.getElementById('rating');
-const rate = document.getElementById('rate');
+const rates = document.getElementById('rates');
+const front = document.getElementById('front');
+const thanks = document.getElementById('thanks');
 
 submitBtn.addEventListener('click', submit);
-rate.addEventListener('click', selectRate);
+rates.addEventListener('click', selectRate);
 
 function selectRate(e) {
-    console.log(e.target);
+    for (const rate of rates.children)
+        rate.firstChild.classList.remove('active');
+    e.target.classList.add('active');
+    rating.innerHTML = e.target.innerHTML;
 }
-function submit() { }
+function submit() {
+    front.style.display = 'none';
+    thanks.style.display = 'flex';
+}
